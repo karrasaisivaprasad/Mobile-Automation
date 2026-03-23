@@ -1,8 +1,11 @@
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -10,6 +13,7 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 public class FirstTest {
 
@@ -29,7 +33,7 @@ public class FirstTest {
     }
 
     @Test
-    public void test1(){
+    public void TC_1(){
      //   AppiumBy.accessibilityId("Accessibility").findElement(driver).click();
         MobileBy.AccessibilityId("Accessibility").findElement(driver).click();
         MobileBy.AccessibilityId("Accessibility Node Querying").findElement(driver).click();
@@ -57,36 +61,56 @@ public class FirstTest {
      //   driver.navigate().back();
     }
     @Test
-    public void test2(){
+    public void TC_2(){
         String text = MobileBy.AccessibilityId("Custom View").findElement(driver).getText();
-        Assert.assertEquals(text,"Custom View");
+        Assert.assertEquals(text,"Custom View","Custom View Displayed");
         driver.navigate().back();
     }
 
     @Test
-    public void test3(){
+    public void TC_3() {
         MobileBy.AccessibilityId("Animation").findElement(driver).click();
         MobileBy.AccessibilityId("Bouncing Balls").findElement(driver).click();
         driver.navigate().back();
         MobileBy.AccessibilityId("Cloning").findElement(driver).click();
+        MobileBy.AccessibilityId("Run").findElement(driver).click();
         driver.navigate().back();
         MobileBy.AccessibilityId("Custom Evaluator").findElement(driver).click();
+        MobileBy.AccessibilityId("Play").findElement(driver).click();
         driver.navigate().back();
         MobileBy.AccessibilityId("Events").findElement(driver).click();
+        MobileBy.AccessibilityId("Play").findElement(driver).click();
         driver.navigate().back();
         MobileBy.AccessibilityId("Loading").findElement(driver).click();
+        MobileBy.AccessibilityId("Run").findElement(driver).click();
         driver.navigate().back();
         MobileBy.AccessibilityId("Reversing").findElement(driver).click();
+        MobileBy.AccessibilityId("Play").findElement(driver).click();
+        MobileBy.AccessibilityId("Reverse").findElement(driver).click();
         driver.navigate().back();
         MobileBy.AccessibilityId("Seeking").findElement(driver).click();
+        MobileBy.AccessibilityId("Run").findElement(driver).click();
         driver.navigate().back();
         MobileBy.AccessibilityId("View Flip").findElement(driver).click();
+        MobileBy.AccessibilityId("Flip").findElement(driver).click();
+        driver.navigate().back();
+        MobileBy.AccessibilityId("Default Layout Animations").findElement(driver).click();
+        int i = 1;
+        while (i<=3){
+            MobileBy.AccessibilityId("Add Button").findElement(driver).click();
+            i++;
+        }
         driver.navigate().back();
         MobileBy.AccessibilityId("Layout Animations").findElement(driver).click();
         driver.navigate().back();
-        driver.navigate().back();
+        //driver.navigate().back();
     }
 
+    @Test
+    public void TC_4(){
+        MobileBy.AccessibilityId("Bouncing Balls").findElement(driver).click();
+        driver.navigate().back();
+    }
 
 
     @AfterTest
