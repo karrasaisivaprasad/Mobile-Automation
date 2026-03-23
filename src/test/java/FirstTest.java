@@ -106,14 +106,6 @@ public class FirstTest {
         //driver.navigate().back();
     }
 
-    @Test
-    public void TC_4(){
-        MobileBy.AccessibilityId("Bouncing Balls").findElement(driver).click();
-        driver.navigate().back();
-        MobileBy.AccessibilityId("Layout Animations").findElement(driver).click();
-        driver.navigate().back();
-    }
-
 
     @AfterTest
     public void close(){
