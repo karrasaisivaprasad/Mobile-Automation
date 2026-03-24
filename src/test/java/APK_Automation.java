@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class FirstTest {
+public class APK_Automation {
 
     public AndroidDriver driver;
 
@@ -65,41 +65,46 @@ public class FirstTest {
 
     @Test
     public void TC_3() {
-        MobileBy.AccessibilityId("Animation").findElement(driver).click();
-        MobileBy.AccessibilityId("Bouncing Balls").findElement(driver).click();
-        driver.navigate().back();
-        MobileBy.AccessibilityId("Cloning").findElement(driver).click();
-        MobileBy.AccessibilityId("Run").findElement(driver).click();
-        driver.navigate().back();
-        MobileBy.AccessibilityId("Custom Evaluator").findElement(driver).click();
-        MobileBy.AccessibilityId("Play").findElement(driver).click();
-        driver.navigate().back();
-        MobileBy.AccessibilityId("Events").findElement(driver).click();
-        MobileBy.AccessibilityId("Play").findElement(driver).click();
-        driver.navigate().back();
-        MobileBy.AccessibilityId("Loading").findElement(driver).click();
-        MobileBy.AccessibilityId("Run").findElement(driver).click();
-        driver.navigate().back();
-        MobileBy.AccessibilityId("Reversing").findElement(driver).click();
-        MobileBy.AccessibilityId("Play").findElement(driver).click();
-        MobileBy.AccessibilityId("Reverse").findElement(driver).click();
-        driver.navigate().back();
-        MobileBy.AccessibilityId("Seeking").findElement(driver).click();
-        MobileBy.AccessibilityId("Run").findElement(driver).click();
-        driver.navigate().back();
-        MobileBy.AccessibilityId("View Flip").findElement(driver).click();
-        MobileBy.AccessibilityId("Flip").findElement(driver).click();
-        driver.navigate().back();
-        MobileBy.AccessibilityId("Default Layout Animations").findElement(driver).click();
-        int i = 1;
-        while (i<=3){
-            MobileBy.AccessibilityId("Add Button").findElement(driver).click();
-            i++;
+        try {
+            MobileBy.AccessibilityId("Animation").findElement(driver).click();
+            MobileBy.AccessibilityId("Bouncing Balls").findElement(driver).click();
+            driver.navigate().back();
+            MobileBy.AccessibilityId("Cloning").findElement(driver).click();
+            MobileBy.AccessibilityId("Run").findElement(driver).click();
+            driver.navigate().back();
+            MobileBy.AccessibilityId("Custom Evaluator").findElement(driver).click();
+            MobileBy.AccessibilityId("Play").findElement(driver).click();
+            driver.navigate().back();
+            MobileBy.AccessibilityId("Events").findElement(driver).click();
+            MobileBy.AccessibilityId("Play").findElement(driver).click();
+            driver.navigate().back();
+            MobileBy.AccessibilityId("Loading").findElement(driver).click();
+            MobileBy.AccessibilityId("Run").findElement(driver).click();
+            driver.navigate().back();
+            MobileBy.AccessibilityId("Reversing").findElement(driver).click();
+            MobileBy.AccessibilityId("Play").findElement(driver).click();
+            MobileBy.AccessibilityId("Reverse").findElement(driver).click();
+            driver.navigate().back();
+            MobileBy.AccessibilityId("Seeking").findElement(driver).click();
+            MobileBy.AccessibilityId("Run").findElement(driver).click();
+            driver.navigate().back();
+            MobileBy.AccessibilityId("View Flip").findElement(driver).click();
+            MobileBy.AccessibilityId("Flip").findElement(driver).click();
+            driver.navigate().back();
+            MobileBy.AccessibilityId("Default Layout Animations").findElement(driver).click();
+            int i = 1;
+            while (i <= 3) {
+                MobileBy.AccessibilityId("Add Button").findElement(driver).click();
+                i++;
+            }
+            driver.navigate().back();
+            MobileBy.AccessibilityId("Layout Animations").findElement(driver).click();
+            driver.navigate().back();
+            //driver.navigate().back();
         }
-        driver.navigate().back();
-        MobileBy.AccessibilityId("Layout Animations").findElement(driver).click();
-        driver.navigate().back();
-        //driver.navigate().back();
+        catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Test
