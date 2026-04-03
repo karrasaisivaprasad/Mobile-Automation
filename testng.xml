@@ -1,0 +1,36 @@
+<suite name="Appium Suite" parallel="tests" thread-count="3">
+
+    <test name="Device_1">
+        <parameter name="deviceName" value="Pixel_9a" />
+        <parameter name="appiumServerUrl" value="http://127.0.0.1:4723" />
+        <parameter name="udid" value="emulator-5554" />
+        <parameter name="systemPort" value="8200" />
+        <parameter name="appPath" value="/Users/sai.karra/Documents/Appium/apps/ApiDemos-debug.apk" />
+        <classes>
+            <class name="Tests.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Device_2">
+        <parameter name="deviceName" value="Pixel_8" />
+        <parameter name="appiumServerUrl" value="http://127.0.0.1:4725" />
+        <parameter name="udid" value="emulator-5556" />
+        <parameter name="systemPort" value="8201" />
+        <parameter name="appPath" value="/Users/sai.karra/Documents/Appium/apps/ApiDemos-debug.apk" />
+        <classes>
+            <class name="Tests.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Device_3">
+        <parameter name="deviceName" value="Pixel_6a" />
+        <parameter name="appiumServerUrl" value="http://127.0.0.1:4727" />
+        <parameter name="udid" value="emulator-5558" />
+        <parameter name="systemPort" value="8202" />
+        <parameter name="appPath" value="/Users/sai.karra/Documents/Appium/apps/ApiDemos-debug.apk" />
+        <classes>
+            <class name="Tests.TestRunner"/>
+        </classes>
+    </test>
+
+</suite>
